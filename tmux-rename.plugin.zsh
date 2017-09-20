@@ -6,7 +6,12 @@
 add-zsh-hook precmd precmd_tmux_rename
 
 precmd_tmux_rename() {
-  local dirname="$(basename "$(git rev-parse --show-toplevel 2>/dev/null)")"
-  [ -n "$dirname" ] && tmux rename-window "$dirname" || :
+  local dir="$(git rev-parse --show-toplevel 2>/dev/null)"
+  if [ -n "$dir" ]
+  then
+    tmux rename-window "$(basename "$dir")"
+  else
+    tmux set-window-option automatic-rename
+  fi
 }
 
