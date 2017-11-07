@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-# tmux-rename.plugin.zsh
+# zsh-tmux-rename.plugin.zsh
 # author: Seong Yong-ju ( @sei40kr )
 
 add-zsh-hook precmd precmd_tmux_rename
