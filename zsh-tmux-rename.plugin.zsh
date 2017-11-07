@@ -3,6 +3,8 @@
 # zsh-tmux-rename.plugin.zsh
 # author: Seong Yong-ju ( @sei40kr )
 
+autoload -Uz add-zsh-hook
+
 add-zsh-hook precmd precmd_tmux_rename
 
 precmd_tmux_rename() {
