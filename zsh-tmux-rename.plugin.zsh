@@ -22,6 +22,9 @@ main() {
 
   tmux set-window-option allow-rename on
   tmux set-window-option automatic-rename off
+
+  # Call manually on loading complete
+  -precmd-zsh-tmux-rename
 }
 
 main
