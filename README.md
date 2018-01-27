@@ -11,9 +11,13 @@ A **ZSH** plugin to rename TMUX window automatically. When you move between dire
 
 ## How it works
 
-[![asciicast](https://asciinema.org/a/146359.png)](https://asciinema.org/a/146359)
+This plugin renames TMUX windows automatically, and keeps the window list readable.
 
-I'm sorry for an ugly example. The TMUX window (under seek-bar) gets renamed on moving to `hello-haskell`.
+![TMUX window list](https://raw.githubusercontent.com/sei40kr/zsh-tmux-rename/master/img/preview.png)
+
+You'll see the TMUX window (under seek-bar) gets renamed on moving to `hello-haskell`.
+
+[![asciicast](https://asciinema.org/a/146359.png)](https://asciinema.org/a/146359)
 
 ## Installation
 
