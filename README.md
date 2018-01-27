@@ -1,12 +1,11 @@
 # zsh-tmux-rename
 
-A **ZSH** plugin to rename tmux window automatically.
+A **ZSH** plugin to rename TMUX window automatically. When you move between directories, the plugin renames the window to the name of Git repository/working directory.
 
 <!-- vim-markdown-toc GFM -->
 
 - [How it works](#how-it-works)
 - [Installation](#installation)
-  - [Example using zplug](#example-using-zplug)
 
 <!-- vim-markdown-toc -->
 
@@ -14,9 +13,9 @@ A **ZSH** plugin to rename tmux window automatically.
 
 [![asciicast](https://asciinema.org/a/146359.png)](https://asciinema.org/a/146359)
 
-## Installation
+I'm sorry for an ugly example. The TMUX window (under seek-bar) gets renamed on moving to `hello-haskell`.
 
-### Example using zplug
+## Installation
 
 1. I recommend you to use [zplugin](https://github.com/zdharma/zplugin) to load the plugin lazily.
 
