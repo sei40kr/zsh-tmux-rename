@@ -1,35 +1,45 @@
 # zsh-tmux-rename
 
-A **ZSH** plugin to rename TMUX window automatically. When you move between directories, the plugin renames the window to the name of Git repository/working directory.
+Keeps the window list human-readable.
 
 <!-- vim-markdown-toc GFM -->
 
 - [How it works](#how-it-works)
 - [Installation](#installation)
+- [Requirements](#requirements)
+- [TODO](#todo)
 
 <!-- vim-markdown-toc -->
 
 ## How it works
 
-This plugin renames TMUX windows automatically, and keeps the window list readable.
+This plugin renames window name according to working directory.
 
-![TMUX window list](https://raw.githubusercontent.com/sei40kr/zsh-tmux-rename/master/img/preview.png)
-
-You'll see the TMUX window (under seek-bar) gets renamed on moving to `hello-haskell`.
+![preview](https://raw.githubusercontent.com/sei40kr/zsh-tmux-rename/master/img/preview.png)
 
 [![asciicast](https://asciinema.org/a/146359.png)](https://asciinema.org/a/146359)
 
 ## Installation
 
-1. I recommend you to use [zplugin](https://github.com/zdharma/zplugin) to load the plugin lazily.
+1. I recommend [zplugin](https://github.com/zdharma/zplugin) to load lazily.
 
     ```zsh
+    # Wait 1s to load
     zplugin ice wait'1'
     zplugin light 'sei40kr/zsh-tmux-rename'
     ```
 
-1. If you're going to use [zplug](https://github.com/zplug/zplug).
+1. You can also use [zplug](https://github.com/zplug/zplug).
 
     ```zsh
     zplug 'sei40kr/zsh-tmux-rename'
     ```
+
+## Requirements
+
+* **unused** vcs_info
+    Loaded automatically, but make sure that other plugins don't use it. (especially prompt plugins)
+
+## TODO
+
+* [ ] Update preview to make clear what this plugin does.

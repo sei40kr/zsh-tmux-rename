@@ -3,28 +3,23 @@
 # zsh-tmux-rename.plugin.zsh
 # author: Seong Yong-ju ( @sei40kr )
 
--precmd-zsh-tmux-rename() {
-  [[ -z "$TMUX" ]] && return 0
+rename-tmux-window() {
+  [[ -z "$TMUX" ]] && return
 
-  local repo_root="$(git rev-parse --show-toplevel 2>/dev/null)"
-
-  if [[ -n "$repo_root" ]]
-  then
-    tmux rename-window "${repo_root##*/}"
+  LANG=en_US.UTF-8 vcs_info
+  if [[ -n "$vcs_info_msg_0_" ]]; then
+    tmux rename-window "${vcs_info_msg_0_}"
   else
     tmux rename-window "${PWD##*/}"
   fi
 }
 
-main() {
-  autoload -Uz add-zsh-hook
-  add-zsh-hook precmd -precmd-zsh-tmux-rename
+autoload -Uz vcs_info
+zstyle ':vcs_info:*' enable git svn
+zstyle ':vcs_info:*' formats '%r'
 
-  tmux set-window-option allow-rename on
-  tmux set-window-option automatic-rename off
+autoload -Uz add-zsh-hook
+add-zsh-hook chpwd rename-tmux-window
 
-  # Call manually on loading complete
-  -precmd-zsh-tmux-rename
-}
+[[ -z "$TMUX" ]] || rename-tmux-window
 
-main
