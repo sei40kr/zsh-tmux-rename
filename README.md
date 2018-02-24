@@ -21,7 +21,7 @@ This plugin renames window name according to working directory.
 
 ## Installation
 
-1. I recommend [zplugin](https://github.com/zdharma/zplugin) to load lazily.
+* I recommend [zplugin](https://github.com/zdharma/zplugin) to load lazily.
 
     ```zsh
     # Wait 1s to load
@@ -29,7 +29,7 @@ This plugin renames window name according to working directory.
     zplugin light 'sei40kr/zsh-tmux-rename'
     ```
 
-1. You can also use [zplug](https://github.com/zplug/zplug).
+* You can also use [zplug](https://github.com/zplug/zplug).
 
     ```zsh
     zplug 'sei40kr/zsh-tmux-rename'
@@ -37,8 +37,7 @@ This plugin renames window name according to working directory.
 
 ## Requirements
 
-* **unused** vcs_info
-    Loaded automatically, but make sure that other plugins don't use it. (especially prompt plugins)
+* **unused** vcs_info - Loaded automatically, but make sure that other plugins don't use it. (especially prompt plugins)
 
 ## TODO
 
